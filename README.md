@@ -202,6 +202,14 @@ npm run dev:stdio    # Development - stdio
 npm run dev:http     # Development - HTTP
 ```
 
+## Related Resources
+
+### Markdown Documentation
+- [Complete Markdown Guide](https://www.mdtotext.com/en/docs/guide/markdown) - Comprehensive Markdown syntax tutorial for efficient md to text conversion
+
+### Online Tools
+- [MD to Text Converter](https://www.mdtotext.com/en) - Free online Markdown to text conversion tool with real-time processing
+
 ## License
 
 MIT License 
