@@ -16,6 +16,7 @@ A powerful Model Context Protocol (MCP) server that converts Markdown documents 
 
 ### Installation
 
+#### Option 1: Clone and Build
 ```bash
 git clone <repository-url>
 cd md_to_text_mcp
@@ -23,15 +24,80 @@ npm install
 npm run build
 ```
 
+#### Option 2: Use with npx (Recommended)
+```bash
+# From npm registry (if published)
+npx md_to_text_mcp --help
+
+# From GitHub repository  
+npx https://github.com/your-username/md_to_text_mcp --help
+
+# Local development
+npm pack
+npx ./md_to_text_mcp-1.0.0.tgz --help
+```
+
 ### Basic Usage
 
 ```bash
 # Stdio mode (default)
 npm start
+# or with npx
+npx md_to_text_mcp
 
 # HTTP mode
 npm run dev:http
+# or with npx  
+npx md_to_text_mcp --mode http --port 3000
 ```
+
+## Using with npx
+
+npx allows you to run the tool without installing it globally. Here's how to use it:
+
+### Quick Test
+```bash
+# Test the tool help
+npx md_to_text_mcp --help
+
+# Run in stdio mode for Claude Desktop
+npx md_to_text_mcp --mode stdio
+
+# Start HTTP server
+npx md_to_text_mcp --mode http --port 3000
+
+# Custom configuration
+npx md_to_text_mcp --mode http --host 0.0.0.0 --port 8080 --cors
+```
+
+### From Local Package
+If you're developing locally:
+```bash
+# Create package
+npm run build
+npm pack
+
+# Run with npx
+npx ./md_to_text_mcp-1.0.0.tgz --help
+npx ./md_to_text_mcp-1.0.0.tgz --mode stdio
+```
+
+### Integration with Claude Desktop via npx
+You can configure Claude Desktop to use the tool via npx:
+
+```json
+{
+  "mcpServers": {
+    "md-to-text": {
+      "command": "npx",
+      "args": ["md_to_text_mcp", "--mode", "stdio"],
+      "cwd": "/tmp"
+    }
+  }
+}
+```
+
+**Note**: Using npx in Claude Desktop config requires that the package is published to npm registry or available in a git repository.
 
 ## Tools
 
