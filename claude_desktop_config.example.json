@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "md-to-text": {
+      "command": "node",
+      "args": ["./build/index.js", "--mode", "stdio"],
+      "cwd": "/path/to/your/md_to_text_mcp"
+    }
+  }
+} 
