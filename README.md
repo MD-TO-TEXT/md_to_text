@@ -30,7 +30,7 @@ npm run build
 npx md_to_text_mcp --help
 
 # From GitHub repository  
-npx https://github.com/your-username/md_to_text_mcp --help
+npx https://github.com/MD-TO-TEXT/md_to_text --help
 
 # Local development
 npm pack
